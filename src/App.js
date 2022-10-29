@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Page, Text } from "@geist-ui/core";
+import ToDoApp from "./components/ToDoApp";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Page>
+        <Page.Header center style={{ backgroundColor: "black", color: "white"  }}>
+          <Text h1>ToDo App</Text>
+        </Page.Header>
+        <Page.Content>
+          <ToDoApp />
+        </Page.Content>
+        <Page.Footer  style={{ backgroundColor: "black", color: "white" ,"textAlign":"center"}}>
+          <Text h4>Footer</Text>
+        </Page.Footer>
+      </Page>
     </div>
   );
 }
